@@ -7,7 +7,7 @@ try {
     console.log(md);
     const mrkdwn = slackifyMarkdown(md);
     console.log("output");
-    console.log(mkdwn);
+    console.log(mrkdwn);
     core.setOutput("text", mrkdwn);
 } catch (error) {
     core.setFailed(error.message);
