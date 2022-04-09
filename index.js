@@ -3,7 +3,11 @@ const slackifyMarkdown = require('slackify-markdown');
 
 try {
     const md = core.getInput('text', {required: true});
+    console.log("input");
+    console.log(md);
     const mrkdwn = slackifyMarkdown(md);
+    console.log("output");
+    console.log(mkdwn);
     core.setOutput("text", mrkdwn);
 } catch (error) {
     core.setFailed(error.message);
